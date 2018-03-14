@@ -1,0 +1,26 @@
+{
+    "name": "so/react-utils-bundle",
+    "description": "React commands for deploying & debugging app",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smart Origin",
+            "email": "charleric.paccard@smart-origin.com",
+            "homepage": "https://smart-origin.com/"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "SO\\ReactUtilsBundle\\" : "SO/ReactUtilsBundle"
+        }
+    },
+    "require": {
+        "php": ">=5.3.1",
+        "symfony/process": "~2.3|~3.0|^4.0"
+    },
+    "suggest": {
+        "limenius/react-bundle": "Client and Server-side react rendering in a Symfony Bundle",
+        "limenius/liform-bundle": "Client and Server-side React rendering"
+    }
+}

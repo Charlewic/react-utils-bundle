@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="so.reactutils.command.npminstallcommand" class="SO\ReactUtilsBundle\Command\NpmInstallCommand">
+            <argument type="service" id="file_locator" />
+            <argument/> <!-- will be filled in with npm_bin_path dynamically -->
+            <tag name="console.command" command="soreact_utils:npm:install" />
+        </service>
+        <service id="so.reactutils.command.yarninstallcommand" class="SO\ReactUtilsBundle\Command\YarnInstallCommand">
+            <argument type="service" id="file_locator" />
+            <argument/> <!-- will be filled in with yarn_bin_path dynamically -->
+            <tag name="console.command" command="soreact_utils:yarn:install" />
+        </service>
+        <service id="so.reactutils.command.npmruncommand" class="SO\ReactUtilsBundle\Command\NpmRunCommand">
+            <argument type="service" id="file_locator" />
+            <argument/> <!-- will be filled in with npm_bin_path dynamically -->
+            <tag name="console.command" command="soreact_utils:npm:run" />
+        </service>
+    </services>
+</container>
