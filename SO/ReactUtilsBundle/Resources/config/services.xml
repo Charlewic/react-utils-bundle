@@ -15,6 +15,11 @@
             <argument/> <!-- will be filled in with yarn_bin_path dynamically -->
             <tag name="console.command" command="soreact_utils:yarn:install" />
         </service>
+        <service id="so.reactutils.command.yarnbuildcommand" class="SO\ReactUtilsBundle\Command\YarnBuildCommand">
+            <argument type="service" id="file_locator" />
+            <argument/> <!-- will be filled in with yarn_bin_path dynamically -->
+            <tag name="console.command" command="soreact_utils:yarn:build" />
+        </service>
         <service id="so.reactutils.command.npmruncommand" class="SO\ReactUtilsBundle\Command\NpmRunCommand">
             <argument type="service" id="file_locator" />
             <argument/> <!-- will be filled in with npm_bin_path dynamically -->

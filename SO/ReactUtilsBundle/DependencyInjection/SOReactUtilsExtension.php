@@ -28,6 +28,9 @@ class SOReactUtilsExtension extends Extension
         $definition = $container->getDefinition('so.reactutils.command.yarninstallcommand');
         $definition->replaceArgument(1, $config['yarn_bin_path']);
 
+        $definition = $container->getDefinition('so.reactutils.command.yarnbuildcommand');
+        $definition->replaceArgument(1, $config['yarn_bin_path']);
+
         $definition = $container->getDefinition('so.reactutils.command.npminstallcommand');
         $definition->replaceArgument(1, $config['npm_bin_path']);
 
